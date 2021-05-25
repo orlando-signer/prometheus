@@ -1,8 +1,18 @@
 version: '3.7'
 
 volumes:
-    prometheus_data: {}
-    grafana_data: {}
+    prometheus_data: 
+      driver: local
+      driver_opts:
+        type: 'none'
+        o: 'bind'
+        device: '/home/pi/docker/data/prometheus'
+    grafana_data:
+      driver: local
+      driver_opts:
+        type: 'none'
+        o: 'bind'
+        device: '/home/pi/docker/data/grafana'
 
 networks:
   front-tier:
