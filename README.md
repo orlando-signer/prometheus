@@ -111,6 +111,14 @@ Now we need to create the Prometheus Datasource in order to connect Grafana to P
 
 <img src="https://raw.githubusercontent.com/vegasbrianc/prometheus/master/images/Add_Data_Source.png" width="400" heighth="400">
 
+# Install node exporter on client
+
+```sh
+sudo apt install prometheus-node-exporter
+```
+Add target to prometheus.yml
+Restart prometheus
+
 # Security Considerations
 This project is intended to be a quick-start to get up and running with Docker and Prometheus. Security has not been implemented in this project. It is the users responsability to implement Firewall/IpTables and SSL.
 
